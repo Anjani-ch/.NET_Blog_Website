@@ -1,0 +1,26 @@
+@model BlogWebsite.Models.Blog
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1 class="mb-1">Create</h1>
+<hr />
+
+<form method="POST" asp-action="Create">
+    <div class="mb-3">
+        <label class="form-label" asp-for="Title"></label>
+        <input type="text" class="form-control" asp-for="Title" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" asp-for="Content"></label>
+        <textarea class="form-control" rows="7" asp-for="Content"></textarea>
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+
+    <div class="mb-3">
+        <input class="btn btn-primary" type="submit" value="Create" />
+    </div>
+</form>
